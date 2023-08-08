@@ -10,7 +10,6 @@ body,
 }
 
 body {
-    padding: 4px;
     height: 95vh;
     width: 95vw;
 }
@@ -20,8 +19,17 @@ button, a {
     cursor: pointer;
 }
 
+ul, li {
+    list-style-type: none;
+    font-size: 18px;
+}
+
 .material-symbols-outlined.md-18 {
     font-size: 18px;
+}
+
+.material-symbols-outlined.md-26 {
+    font-size: 26px;
 }
 
 .material-symbols-outlined.background {
@@ -65,23 +73,52 @@ button, a {
     grid-row: 1 / span 5;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr) 2fr;
-    gap: 24px;
+    grid-template-rows: 2fr 1fr;
+    background-color: #3700b3;
 }
 
+.container > .sidebar > .wrapper {
+    background-color: #3700b3;
+}
 
-.container > .sidebar .wrapper,
-.container > .sidebar .wrapper > nav {
-    display: flex;
+.container > .sidebar > div .upperNav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
     align-items: center;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    background-color: #3700b3;
 }
 
-.container > .sidebar .wrapper {
-    justify-content: center;
+.container > .sidebar > div .upperNav a {
+    font-size: 20px;
+    background-color: #3700b3;
 }
 
-.container > .sidebar .wrapper > nav {
-    flex-direction: column;
+.container > .sidebar > div .middleNav,
+.container > .sidebar > div .lowerNav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    background-color: #3700b3;
+}
+
+.container > .sidebar > div nav span {
+    justify-self: right;
+    background-color: #3700b3;
+}
+
+.container > .sidebar > div nav a {
+    justify-self: left;
+    background-color: #3700b3;
 }
 
 .container > .controls {
