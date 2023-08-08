@@ -3,7 +3,7 @@ body,
     padding: 0;
     margin: 0;
     border: none;
-    background-color: #121212;
+    background-color: #242424;
     color: white;
     font-size: 12px;
     font-family: "Roboto", sans-serif, system-ui;
@@ -17,6 +17,19 @@ body {
 button, a {
     text-decoration: none;
     cursor: pointer;
+    background-color: inherit;
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus,
+.container > .top-bar > label:hover,
+.container > .top-bar > label:focus,
+.container > .top-bar > span:hover,
+.container > .top-bar > span:focus {
+    box-shadow: 0 0 0.5em 0.5em -0.4em #121212;
+    transform: translateY(-0.25em);
 }
 
 ul, li {
@@ -33,7 +46,7 @@ ul, li {
 }
 
 .material-symbols-outlined.background {
-    background-color: #242424;
+    background-color: inherit;
     color: white;
 }
 
@@ -45,6 +58,7 @@ ul, li {
 .container > .controls > .noBorderButton {
     border: none;
     border-radius: 0;
+    background-color: inherit;
 }
 
 .container {
@@ -52,7 +66,6 @@ ul, li {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 0.15fr 0.25fr repeat(3, 1fr) 0.15fr;
     background-color: inherit;
-    gap: 4px;
 }
 
 .container > .top-bar {
@@ -64,12 +77,18 @@ ul, li {
     gap: 2px;
     justify-content: center;
     align-items: center;
+    background-color: #242424;
 }
 
 .container > .top-bar > label,
 .container > .top-bar > button,
 .container > .top-bar > span {
+    background-color: inherit;
     text-align: right;
+}
+
+.container > .top-bar > label > span {
+    background-color: inherit;
 }
 
 .container > .top-bar > label,
@@ -79,8 +98,9 @@ ul, li {
 
 .container > .top-bar > #searchBar {
     padding: 2px;
-    border: 2px solid white;
+    border: 2px solid #363636;
     border-radius: 4px;
+    background-color: inherit;
 }
 
 .container > .top-bar > #searchBar:focus {
@@ -90,6 +110,7 @@ ul, li {
 
 .container > .top-bar > .topBar-name {
     text-align: center;
+    background-color: inherit;
 }
 
 .container > .sidebar {
@@ -98,11 +119,11 @@ ul, li {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .sidebar > .wrapper {
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .sidebar > div .upperNav {
@@ -114,12 +135,12 @@ ul, li {
     row-gap: 0.5rem;
     margin-bottom: 24px;
     margin-top: 24px;
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .sidebar > div .upperNav a {
     font-size: 20px;
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .sidebar > div .middleNav,
@@ -132,17 +153,17 @@ ul, li {
     row-gap: 0.5rem;
     margin-bottom: 24px;
     margin-top: 24px;
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .sidebar > div nav span {
     justify-self: right;
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .sidebar > div nav a {
     justify-self: left;
-    background-color: #3700b3;
+    background-color: #bb86fc;
 }
 
 .container > .controls {
@@ -152,22 +173,42 @@ ul, li {
     grid-template-columns: 1fr 3fr repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: 2px;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    background-color: #242424;
+    -webkit-box-shadow: 0 4px 2px -1px #121212;
+    -moz-box-shadow: 0 4px 2px -1px #121212;
+    box-shadow: 0 4px 2px -1px #121212;
 }
 
-.container > .controls h6 {
+.container > .controls > .text,
+.container > .controls > .text > h6,
+.container > .controls > .text > p {
+    background-color: inherit;
+}
+
+.container > .controls > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.container > .controls > .text > h6 {
     font-weight: 400;
     font-size: 8px;
     letter-spacing: 0.75px;
 }
 
 .container > .controls button {
-    border: 2px solid white;
+    border: 2px solid #363636;
     border-radius: 12px;
     height: 2rem;
     width: 5rem;
     font-size: 12px;
     padding: 2px;
+    background-color: #bb86fc;
 }
 
 .container > .cardsContainer {
@@ -177,12 +218,16 @@ ul, li {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 0.5fr 9.5fr;
     column-gap: 4px;
+    row-gap: 4px;
+    background-color: #242424;
+    padding-left: 4px;
 }
 
 .container > .cardsContainer > p {
     align-self: end;
     margin-bottom: 4px;
     font-weight: 700;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .cards {
@@ -190,38 +235,41 @@ ul, li {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 4px;
+    background-color: #121212;
 }
 
 .container > .cardsContainer > .cards .card {
-    border: 2px solid white;
+    border: 2px solid #363636;
     border-radius: 4px;
-    border-left-color: #bb86fc;
+    border-left-color: #9453e2;
     border-left-width: 4px;
     padding-left: 4px;
     background-color: #242424;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 9.5fr 0.5fr;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .cards .card > .icons {
     grid-row: 2;
     grid-column: 2;
-    background-color: #242424;
     justify-self: end;
     margin-bottom: 4px;
     margin-right: 4px;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .cards .card > .textContainer {
     grid-row: 1;
     grid-column: 1 / span 2;
-    background-color: #242424;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .cards .card > .textContainer > .title,
-.container > .cardsContainer > .cards .card > .textContainer > .description {
-    background-color: #242424;
+.container > .cardsContainer > .cards .card > .textContainer > .description,
+.container > .cardsContainer > .cards .card > .icons button {
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .cards .card > .textContainer > .title {
@@ -238,7 +286,8 @@ ul, li {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-top: 22.5px;
+    margin-top: 27px;
+    background-color: #121212;
 }
 
 .container > .cardsContainer > .rightBar > .announcements,
@@ -246,6 +295,7 @@ ul, li {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 9.5fr;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .rightBar > .announcements {
@@ -267,16 +317,18 @@ ul, li {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card {
-    border: 2px solid white;
+    border: 2px solid #363636;
     border-radius: 2px;
     background-color: #242424;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card p {
-    background-color: #242424;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card .title {
@@ -288,19 +340,20 @@ ul, li {
 }
 
 .container > .cardsContainer > .rightBar > .trending > .cardsContainer .card {
-    border: 2px solid white;
+    border: 2px solid #363636;
     border-radius: 2px;
     background-color: #242424;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .rightBar > .trending > .cardsContainer .card img,
 .container > .cardsContainer > .rightBar > .trending > .cardsContainer .card div,
 .container > .cardsContainer > .rightBar > .trending > .cardsContainer .card div p {
-    background-color: #242424;
+    background-color: inherit;
 }
 
 .container > .cardsContainer > .rightBar > .trending > .cardsContainer .card img {
