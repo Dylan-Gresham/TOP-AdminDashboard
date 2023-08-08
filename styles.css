@@ -109,7 +109,8 @@ ul, li {
 }
 
 .container > .top-bar > .topBar-name {
-    text-align: center;
+    text-align: left;
+    padding-left: 2px;
     background-color: inherit;
 }
 
@@ -202,12 +203,13 @@ ul, li {
 }
 
 .container > .controls button {
+    justify-self: right;
     border: 2px solid #363636;
     border-radius: 12px;
     height: 2rem;
     width: 5rem;
     font-size: 12px;
-    padding: 2px;
+    margin-bottom: 10px;
     background-color: #bb86fc;
 }
 
