@@ -266,10 +266,14 @@ ul, li {
     grid-row: 1;
     grid-column: 1 / span 2;
     background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.container > .cardsContainer > .cards .card > .textContainer > .title,
-.container > .cardsContainer > .cards .card > .textContainer > .description,
+.container > .cardsContainer > .cards .card > .textContainer > .textDiv,
+.container > .cardsContainer > .cards .card > .textContainer > .textDiv > .title,
+.container > .cardsContainer > .cards .card > .textContainer > .textDiv > .description,
 .container > .cardsContainer > .cards .card > .icons button {
     background-color: inherit;
 }
@@ -350,6 +354,11 @@ ul, li {
     grid-template-rows: 1fr;
     align-items: center;
     background-color: inherit;
+}
+
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card img {
+    justify-self: center;
+    align-self: center;
 }
 
 .container > .cardsContainer > .rightBar > .trending > .cardsContainer .card img,
