@@ -13,8 +13,8 @@ body,
 
 body {
     padding: 4px;
-    height: 100vh;
-    width: 100vw;
+    height: 95vh;
+    width: 95vw;
 }
 
 .container {
@@ -32,6 +32,10 @@ body {
     grid-template-columns: 1fr 4fr repeat(2, 1fr) 2fr;
     grid-template-rows: 1fr;
     gap: 8px;
+}
+
+.container > span > .topBar-name {
+    text-align: right;
 }
 
 .container > .sidebar {
@@ -85,4 +89,12 @@ body {
     height: 30%;
     width: 5rem;
     font-size: 12px;
+}
+
+.container > .labels {
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
