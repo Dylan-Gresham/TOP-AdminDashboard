@@ -28,8 +28,8 @@ button, a {
 }
 
 .container > .top-bar {
+    grid-column: 2;
     grid-row: 1;
-    grid-column: 2 / span 2;
     display: grid;
     grid-template-columns: 1fr 4fr repeat(2, 1fr) 2fr;
     grid-template-rows: 1fr;
@@ -41,8 +41,8 @@ button, a {
 }
 
 .container > .sidebar {
-    grid-row: 2 / span 4;
     grid-column: 1;
+    grid-row: 1 / span 5;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr) 2fr;
