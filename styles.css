@@ -59,9 +59,33 @@ ul, li {
     grid-column: 2;
     grid-row: 1;
     display: grid;
-    grid-template-columns: 1fr 4fr repeat(2, 1fr) 2fr;
+    grid-template-columns: 1fr 5fr repeat(2, 1fr) 2fr;
     grid-template-rows: 1fr;
-    gap: 8px;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > .top-bar > label,
+.container > .top-bar > button,
+.container > .top-bar > span {
+    text-align: right;
+}
+
+.container > .top-bar > label,
+.container > .top-bar > span {
+    cursor: pointer;
+}
+
+.container > .top-bar > #searchBar {
+    padding: 2px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.container > .top-bar > #searchBar:focus {
+    outline: 1px solid #bb86fc;
+    transform: all 0.4s;
 }
 
 .container > .top-bar > .topBar-name {
