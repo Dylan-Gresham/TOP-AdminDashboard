@@ -1,11 +1,8 @@
-:root {
-    font-size: 12px;
-}
-
 body,
 * {
     padding: 0;
     margin: 0;
+    border: none;
     background-color: #121212;
     color: white;
     font-size: 12px;
@@ -18,13 +15,14 @@ body {
 }
 
 button, a {
+    text-decoration: none;
     cursor: pointer;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 0.25fr 0.5fr repeat(3, 1fr);
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.15fr 0.25fr repeat(3, 1fr) 0.15fr;
     background-color: inherit;
     gap: 4px;
 }
@@ -39,7 +37,7 @@ button, a {
 }
 
 .container > .top-bar > .topBar-name {
-    text-align: right;
+    text-align: center;
 }
 
 .container > .sidebar {
@@ -66,10 +64,6 @@ button, a {
     flex-direction: column;
 }
 
-.container > .sidebar a {
-    text-decoration: none;
-}
-
 .container > .controls {
     grid-row: 2;
     grid-column: 2 / span 2;
@@ -89,17 +83,23 @@ button, a {
 .container > .controls button {
     border: 2px solid white;
     border-radius: 12px;
-    height: 30%;
+    height: 2rem;
     width: 5rem;
     font-size: 12px;
+    padding: 2px;
 }
 
 .container > .cardsContainer {
-    grid-row: 3 / span 4;
     grid-column: 2;
+    grid-row: 3 / span 4;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 0.5fr 9.5fr;
+    column-gap: 4px;
+}
+
+.container > .cardsContainer > p {
+    font-weight: 700;
 }
 
 .container > .cardsContainer > .cards {
@@ -112,13 +112,10 @@ button, a {
 .container > .cardsContainer > .cards .card {
     border: 2px solid white;
     border-radius: 4px;
-    border-left-color: #d99e1f;
+    border-left-color: #bb86fc;
     border-left-width: 4px;
     padding-left: 4px;
     background-color: #242424;
-}
-
-.container > .cardsContainer > .cards .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 9.5fr 0.5fr;
@@ -145,10 +142,109 @@ button, a {
 }
 
 .container > .cardsContainer > .cards .card > .textContainer > .title {
-    font-size: 12px;
     font-weight: 700;
 }
 
 .container > .cardsContainer > .cards .card > .textContainer > .description {
     font-size: 8px;
+}
+
+.container > .cardsContainer > .rightBar {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 17px;
+}
+
+.container > .cardsContainer > .rightBar > .announcements,
+.container > .cardsContainer > .rightBar > .trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 9.5fr;
+}
+
+.container > .cardsContainer > .rightBar > .announcements {
+    grid-row: 1;
+}
+
+.container > .cardsContainer > .rightBar > .announcements > p,
+.container > .cardsContainer > .rightBar > .trending > p {
+    text-align: center;
+    font-weight: 700;
+}
+
+.container > .cardsContainer > .rightBar > .trending {
+    grid-row: 2;
+}
+
+.container > .cardsContainer > .rightBar > .announcements > .cardsContainer,
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card {
+    border: 2px solid white;
+    border-radius: 2px;
+    background-color: #242424;
+}
+
+.container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card p {
+    background-color: #242424;
+}
+
+.container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card .title {
+    font-weight: 700;
+}
+
+.container > .cardsContainer > .rightBar > .announcements > .cardsContainer .card .description {
+    font-size: 8px;
+}
+
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card {
+    border: 2px solid white;
+    border-radius: 2px;
+    background-color: #242424;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card img,
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card div,
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card div p {
+    background-color: #242424;
+}
+
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card div {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.container > .cardsContainer > .rightBar > .trending > .cardsContainer .card div .description {
+    font-size: 8px;
+    opacity: 0.5;
+}
+
+.container > .footer {
+    grid-row: -1;
+    grid-column: 1 / span 3;
+    align-self: center;
+    justify-self: center;
+    margin: 4px 0;
+    background-color: #242424;
+}
+
+.container > .footer,
+.container > .footer > a {
+    background-color: #242424;
 }
