@@ -20,6 +20,19 @@ button, a {
     cursor: pointer;
 }
 
+.material-symbols-outlined.md-18 {
+    font-size: 18px;
+}
+
+.material-symbols-outlined.background {
+    background-color: #242424;
+    color: white;
+}
+
+.iconButton {
+    background-color: #242424;
+}
+
 .container > .top-bar > .noBorderButton,
 .container > .controls > .noBorderButton {
     border: none;
@@ -106,6 +119,8 @@ button, a {
 }
 
 .container > .cardsContainer > p {
+    align-self: end;
+    margin-bottom: 4px;
     font-weight: 700;
 }
 
@@ -162,7 +177,7 @@ button, a {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-top: 17px;
+    margin-top: 22.5px;
 }
 
 .container > .cardsContainer > .rightBar > .announcements,
@@ -248,10 +263,5 @@ button, a {
     align-self: center;
     justify-self: center;
     margin: 4px 0;
-    background-color: #242424;
-}
-
-.container > .footer,
-.container > .footer > a {
     background-color: #242424;
 }
